@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:padding="@dimen/default_margin_padding">
+
+        <ImageView
+                android:id="@+id/movie_details_image_view"
+                android:layout_width="@dimen/image_view_details_width_height"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/lbl_movie_poster"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher"
+                tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+                android:id="@+id/movie_details_title"
+                style="@style/detailsTextViewStyle"
+                tools:text="Movie Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                app:layout_constraintTop_toBottomOf="@+id/movie_details_image_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:id="@+id/movie_details_release_date_label"
+                style="@style/detailsTextViewStyle"
+                tools:text="Release Date:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                app:layout_constraintTop_toBottomOf="@+id/movie_details_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:id="@+id/movie_details_overview"
+                style="@style/detailsTextViewStyle"
+                tools:text="Overview"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                app:layout_constraintTop_toBottomOf="@+id/movie_details_release_date_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

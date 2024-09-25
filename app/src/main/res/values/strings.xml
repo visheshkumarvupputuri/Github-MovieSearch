@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movie Search</string>
+    <string name="lbl_search_movies">Search Movies</string>
+    <string name="lbl_search">Search</string>
+    <string name="release_date_value">Release Date: %1$s</string>
+    <string name="lbl_movie_poster">Movie Poster</string>
+    <string name="lbl_retry">Retry</string>
+    <string name="error_text">Something went wrong</string>
+</resources>

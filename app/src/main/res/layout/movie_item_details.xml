@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:padding="@dimen/default_margin_padding">
+
+    <ImageView
+            android:id="@+id/movie_item_image_view"
+            android:layout_width="@dimen/image_view_width_height"
+            android:layout_height="@dimen/image_view_width_height"
+            android:contentDescription="@string/lbl_movie_poster"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/movie_item_title"
+            tools:text="Football"
+            style="@style/constraintTextViewStyle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintTop_toTopOf="@+id/movie_item_image_view"
+            app:layout_constraintStart_toEndOf="@+id/movie_item_image_view"
+            android:layout_marginStart="@dimen/default_margin_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"/>
+
+    <TextView android:id="@+id/movie_item_release_date"
+              tools:text="Release Date"
+              style="@style/constraintTextViewStyle"
+              app:layout_constraintStart_toStartOf="@+id/movie_item_title"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginTop="@dimen/default_margin_padding"
+              app:layout_constraintTop_toBottomOf="@+id/movie_item_title"
+              app:layout_constraintHorizontal_bias="0"/>
+
+</android.support.constraint.ConstraintLayout>
